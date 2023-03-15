@@ -31,4 +31,4 @@ for(int i = 0; i < size; i++)
     sum += array[i];
 }
 
-Console.WriteLine($"Массив [{String.Join("; ", array)}] сумма чисел с  четным индексом равна {sum}");
+Console.WriteLine($"Массив [{String.Join("; ", array)}] сумма чисел стоящих на четных позициях равна {sum}");
