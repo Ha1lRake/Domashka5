@@ -7,21 +7,21 @@ Console.WriteLine("Введите размер массива");
 
 int size = Convert.ToInt32(Console.ReadLine());
 
-int [] array = GetArray(size);
+double [] array = GetArray(size);
 
-int [] GetArray(int size)
+double [] GetArray(int size)
 {
-    int [] result = new int [size];
+    double [] result = new double [size];
 
     for(int i = 0; i < size; i++)
     {
-        result[i] = new Random().Next(100);
+        result[i] = new Random().NextDouble() * 100 ;
     }
     return result;
 }
 
-int min = array[0];
-int max = array[0];
+double min = array[0];
+double max = array[0];
 
 for(int i = 0; i < size; i++)
 {
@@ -36,7 +36,7 @@ for(int i = 0; i < size; i++)
 
 }
 
-int difference = max - min;
+double difference = max - min;
 
 
 Console.WriteLine($"Разница между максимальным числом {max} и минимальным {min} из массива [{String.Join("; ", array)}] равна {difference}");
