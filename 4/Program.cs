@@ -16,16 +16,26 @@ int[] MagicMetod(int size)
 
     for (int i = 0; i < size; i++)
     {
-        MagicResult[i] = new Random().Next(10);
+        MagicResult[i] = new Random().Next(1, 10);
     }
     return MagicResult;
 }
+
+Console.Write($"Массив -> [{String.Join("; ", array)}] ");
+
 int result = array[0];
+
 for (int i = 0; i < size / 2; i++)
 {
     result = array[i] * array[size - i - 1];
-    Console.WriteLine(result);
-}
+    Console.Write($"произведение {array[i]} на {array[size - i - 1]} = {result}  ");
+    
 
-Console.WriteLine($"Массив -> [{String.Join("; ", array)}] произведение = {result}");
+}
+if(size %2 ==1)
+    {
+        Console.Write("число посередине - " + array[size/2]);
+    } 
+
+
 
